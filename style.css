@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #f4f6fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  color: #222;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #4a6cf7, #7b39ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.input-box {
+  display: flex;
+  width: 100%;
+  max-width: 520px;
+  background: white;
+  padding: 12px;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  gap: 10px;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  font-size: 16px;
+  border-radius: 10px;
+  outline: none;
+  background: #f1f3f9;
+}
+
+.input-box button {
+  padding: 14px 22px;
+  background: #4a6cf7;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.input-box button:hover {
+  background: #3c56d9;
+}
+
+#linkList {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.link-card img {
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+}
+
+.link-card a {
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+  word-break: break-all;
+  flex: 1;
+}
+
+.copy-btn {
+  padding: 8px 14px;
+  background: #e8ecff;
+  color: #4a6cf7;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.copy-btn:hover {
+  background: #d9e1ff;
+}
+
+#linksContainer {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-card {
+    background: #fff;
+    padding: 14px 18px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #e6e6e6;
+    transition: 0.2s ease;
+}
+
+.link-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.07);
+}
+
+.link-icon {
+    width: 22px;
+    height: 22px;
+}
+
+.delete-btn {
+    margin-left: auto;
+    background: #ff4747;
+    border: none;
+    color: white;
+    padding: 7px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.copy-btn {
+    background: #4caf50;
+    border: none;
+    color: white;
+    padding: 7px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.logout-btn {
+    background: #ff4747;
+    border: none;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    float: right;
+    margin-top: -40px;
+}
+
+@media (max-width: 768px) {
+    #linksContainer {
+        flex-direction: column;
+    }
+
+    .link-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .delete-btn, .copy-btn {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    .link-input-section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
