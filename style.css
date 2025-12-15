@@ -1,0 +1,358 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #f4f6fa, #eef1f8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  color: #222;
+}
+
+/* ---------- HEADINGS ---------- */
+
+h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  letter-spacing: -0.6px;
+  background: linear-gradient(135deg, #4a6cf7, #7b39ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ---------- INPUT SECTION ---------- */
+
+.input-box {
+  display: flex;
+  width: 100%;
+  max-width: 520px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 12px;
+  border-radius: 16px;
+  gap: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.04);
+  backdrop-filter: blur(6px);
+}
+
+.input-box input {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  font-size: 16px;
+  border-radius: 12px;
+  outline: none;
+  background: #f1f3f9;
+}
+
+.input-box input::placeholder {
+  color: #9aa0b4;
+}
+
+.input-box input:focus {
+  box-shadow: 0 0 0 2px rgba(74,108,247,0.15);
+}
+
+.input-box button {
+  padding: 14px 22px;
+  background: linear-gradient(135deg, #4a6cf7, #5b7cff);
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.input-box button:hover {
+  box-shadow: 0 8px 22px rgba(74,108,247,0.35);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* ---------- LINKS LIST ---------- */
+
+#linksContainer {
+  margin-top: 28px;
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ---------- LINK CARD ---------- */
+
+.link-card {
+  background: linear-gradient(180deg, #ffffff, #fafbff);
+  padding: 14px 18px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #e6e6e6;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.link-card::before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #4a6cf7, #7b39ff);
+  border-radius: 8px;
+  margin-right: 6px;
+}
+
+.link-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+.link-icon {
+  width: 22px;
+  height: 22px;
+  background: #fff;
+  padding: 3px;
+  border-radius: 6px;
+}
+
+.link-card a {
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+  word-break: break-all;
+  flex: 1;
+}
+
+.link-card a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- ACTION BUTTONS ---------- */
+
+.copy-btn {
+  background: linear-gradient(135deg, #4caf50, #43a047);
+  border: none;
+  color: white;
+  padding: 7px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.copy-btn:hover {
+  opacity: 0.9;
+}
+
+.delete-btn {
+  margin-left: auto;
+  background: linear-gradient(135deg, #ff5f5f, #ff3b3b);
+  border: none;
+  color: white;
+  padding: 7px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  opacity: 0.9;
+}
+
+/* ---------- LOGOUT ---------- */
+
+.logout-btn {
+  background: linear-gradient(135deg, #ff5f5f, #ff3b3b);
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  float: right;
+  margin-top: -38px;
+  box-shadow: 0 6px 14px rgba(255,71,71,0.25);
+}
+
+.logout-btn:hover {
+  opacity: 0.9;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 768px) {
+  body {
+    padding: 24px 16px;
+  }
+
+  h1 {
+    font-size: 34px;
+    text-align: center;
+  }
+
+  .input-box {
+    flex-direction: column;
+  }
+
+  .input-box input,
+  .input-box button {
+    width: 100%;
+  }
+
+  .link-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .delete-btn,
+  .copy-btn {
+    margin-left: 0;
+    margin-top: 6px;
+  }
+
+  .logout-btn {
+    float: none;
+    margin: 20px auto 0;
+    display: block;
+  }
+}
+#saveLinkBtn {
+  background: #ff4747;
+  color: white;
+}
+
+#saveLinkBtn:hover {
+  background: #e63c3c;
+}
+#saveLinkBtn {
+  padding: 14px 22px;     /* reduced slightly */
+  font-size: 16px;       /* matches input text */
+  font-weight: 600;
+  border-radius: 10px;   /* smart, not over-rounded */
+  line-height: 1;
+}
+/* ===== HAMBURGER MENU ===== */
+
+.top-bar {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.menu-btn {
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4a6cf7;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 240px;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.1);
+  padding: 30px 20px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.side-menu.active {
+  left: 0;
+}
+
+.menu-email {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+  word-break: break-all;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.25);
+  display: none;
+  z-index: 900;
+}
+
+#overlay.active {
+  display: block;
+}
+
+/* Top bar layout */
+.top-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+/* Hamburger stays left */
+.menu-btn {
+  position: absolute;
+  left: 0;
+}
+
+/* Centered title */
+.top-bar h1 {
+  margin: 0 auto;
+  font-size: 42px;
+}
+
+/* Title load animation */
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.top-bar h1 {
+  animation: fadeSlideDown 0.6s ease-out;
+}
+
+/* Toast notification */
+.toast {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 9999;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-6px);
+}
+
